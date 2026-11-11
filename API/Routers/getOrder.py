@@ -20,7 +20,7 @@ def get_trips():
     try:
         conn, cursor = connect_database_Order()
         cursor.execute('''
-        select name, description, image_url, price, type, active from Orders''')
+        select name, description, image_url, price, type from Orders where active = true''')
         result = cursor.fetchall()
         response = {
     'Status': True,
@@ -30,8 +30,7 @@ def get_trips():
             'description': row[1],
             'image_url': row[2],
             'price': row[3],
-            'type': row[4],
-            'active': row[5]
+            'type': row[4]
         }
         for row in result
     ]

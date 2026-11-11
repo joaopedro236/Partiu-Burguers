@@ -14,7 +14,9 @@
 }
 
 
-
+.title {
+    font-size: 33px;
+}
 .orders {
     width: 100%;
     display: flex;

@@ -9,7 +9,7 @@ export default function Orders({ orders }) {
     return (
         <>
             <section className="orders">
-                <h1>Cardapio</h1>
+                <h1 className='title'>Cardapio</h1>
                 {types.map(type => (
                     <div key={type} className="order-category">
                         <h1>{type}</h1>
@@ -40,7 +40,6 @@ export default function Orders({ orders }) {
                                             <h1>{order.name}</h1>
                                             <p>{order.description}</p>
                                             <p>{order.price}</p>
-                                            <p>{String(order.active)}</p>
                                         </div>
                                     </SwiperSlide>
                                 ))}
