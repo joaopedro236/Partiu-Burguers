@@ -9,6 +9,7 @@ export default function Orders({ orders }) {
     return (
         <>
             <section className="orders">
+                <h1>Cardapio</h1>
                 {types.map(type => (
                     <div key={type} className="order-category">
                         <h1>{type}</h1>

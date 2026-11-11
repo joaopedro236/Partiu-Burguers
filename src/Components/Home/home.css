@@ -1,34 +1,15 @@
 .Home {
     padding: 20px   ;
 }
-.Home header {
-    position: relative;
-}
-.Home input {
-    background-color: #ffffff1b;
-    padding: 13px;
-    border-radius: 10px;
+.Home p {
+    color: var(--text-gray);
+}.Home button {
     width: 100%;
-    padding-left: 45px;
-    max-width: 550px;
-}
-.Home label {
-
-    position: absolute;
-    left: calc(50% - 265px);
-    transition: opacity 0.2s ease-in-out;
-}
-.Home input::placeholder {
-    font-size: 14px;
-    transform: translateX(20px);
-}
-.Home label  svg {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    max-width: 300px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 20px;
+    background-color: rgb(18, 43, 232);
 }
 header:has(input:focus) label {
     opacity: 0;
