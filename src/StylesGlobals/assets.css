@@ -1,8 +1,13 @@
 body {
-    width: 100%;
-    min-height: 100vh;
-    background-image: var(--bg-primary);
-    color: var(white  );
-background-color: var(--bg-secondary);
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: var(--bg-primary);
+  color: var(--color-white);
   background-attachment: fixed;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600
 }

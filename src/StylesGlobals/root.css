@@ -1,18 +1,6 @@
 :root {
-    --bg-primary:radial-gradient(
-      circle at 15% 15%,
-      rgba(234, 179, 8, 0.20) 0%,
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 35%,
-      rgba(234, 179, 8, 0.16) 0%,
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 50% 100%,
-      rgba(234, 179, 8, 0.13) 0%,
-      transparent 32%
-    );
-    --bg-secondary:#050505;
+    --bg-primary:#2A323F;
+    --white:white;
+    --black:black;
+    --text-gray:rgb(222, 222, 222);
 }
