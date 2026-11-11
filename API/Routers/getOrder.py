@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from ..Databases.Conn.release_database import release_database
 from ..Databases.Conn.Orders import connect_database_Order, pool_Order
-from fastapi.encoders import jsonable_encoderf
+from fastapi.encoders import jsonable_encoder
 from ..Databases.Conn.Redis import redis_client
 import json
 router = APIRouter()
@@ -28,7 +28,7 @@ def get_trips():
                 CACHE_KEY,
                 CACHE_TIL,
                 json.dumps(
-                    jsonable_encoderf(response),
+                    jsonable_encoder(response),
                     ensure_ascii=False
                 )
             )

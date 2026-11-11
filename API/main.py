@@ -34,7 +34,7 @@ async def rate_limit_middleware(request: Request, call_next):
     return await call_next(request)
 
 
-origins = os.getenv("FRONTEND_URLS").split(",")
+origins = os.getenv("https://partiu-burguers.vercel.app/").split(",")
 
 app.add_middleware(
     CORSMiddleware,
