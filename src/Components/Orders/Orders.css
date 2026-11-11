@@ -1,5 +1,7 @@
 
 .OrdersSection {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     padding: 20px;
     width: 100%;
@@ -22,42 +24,42 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 35px;
     margin-top: 20px;
 }
 
-/* Categorias */
-.orders > div {
+.order-category {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
-.orders > div > h1 {
-    font-size: 24px;
+.order-category > h1 {
+    font-size: 25px;
     font-weight: 700;
     color: #f1f5f9;
 }
 
-/* Grid dos produtos */
-.orders > div > div {
+.order-list {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
-    width: 100%;
 }
 
-/* Cards */
 .order {
     width: 100%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 14px;
+
     background: #111c30;
     border: 1px solid #243753;
     border-radius: 16px;
+
     transition: all 0.3s ease;
 }
 
@@ -150,48 +152,52 @@
     border-color: #c52222;
 }
 
-@media (max-width: 650px) {
-    .orders {
-        padding: 10px;
-    }
-
-    .orders > div > div {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (hover: hover) {
     .order:hover {
-        transform: translateY(6px);
+        transform: translateY(-4px);
         box-shadow: 0 8px 25px rgba(0, 112, 255, 0.15);
         border-color: #3b82f6;
     }
 }
 
-@media (min-width: 971px) {
-    .orders > div > div {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 650px) {
+    .OrdersSection {
+        padding: 10px;
     }
 
-    .order {
-        max-width: 450px;
+    .orders {
+        gap: 25px;
+    }
+
+    .order-list {
+        grid-template-columns: 1fr;
+    }
+
+    .order-category > h1 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 971px) {
+    .order-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (min-width: 1200px) {
-    .orders > div > div {
+    .order-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media (min-width: 1700px) {
-    .orders > div > div {
+    .order-list {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
 @media (min-width: 2100px) {
-    .orders > div > div {
+    .order-list {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
