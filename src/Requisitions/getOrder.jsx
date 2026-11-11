@@ -5,7 +5,7 @@
             if (data?.Error){
                 console.error(data?.Error)
             }
-            setOrders(data)
+            setOrders(data.orders)
         }catch(error){
             console.error(error)
         }
