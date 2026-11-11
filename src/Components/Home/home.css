@@ -1,21 +1,26 @@
 .Home {
     padding: 20px   ;
+    padding-top: 35px;
 }
 .Home p {
     color: var(--text-gray);
     font-size: 13.5px;
+    max-width: 350px;
 }.Home button {
     width: 100%;
     max-width: 200px;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.055);
     border-radius: 20px;
-    padding: 15px;
-    background-color: var(--bg-primary);
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #2563EB;
 }
 .Home h1 {
     font-size: 35px;
 }
-header:has(input:focus) label {
-    opacity: 0;
+@media (hover:hover) {
+    .Home button:hover{
+        transform: translateX(-7px);
+    }
 }
