@@ -22,7 +22,20 @@ def get_trips():
         cursor.execute('''
         select name, description, image_url, price, type, active from Orders''')
         result = cursor.fetchall()
-        response = {'Status': True, 'name': result[0], 'description': result[1], 'image_url': result[2], 'price': result[3], 'type': result[4], 'active': result[5]}
+        response = {
+    'Status': True,
+    'orders': [
+        {
+            'name': row[0],
+            'description': row[1],
+            'image_url': row[2],
+            'price': row[3],
+            'type': row[4],
+            'active': row[5]
+        }
+        for row in result
+    ]
+}
         try:
             redis_client.setex(
                 CACHE_KEY,
