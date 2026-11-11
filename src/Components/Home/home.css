@@ -8,6 +8,8 @@
     background-color: #ffffff1b;
     padding: 13px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
 }
 .Home label {
     transition: opacity 0.2s ease-in-out;

@@ -3,7 +3,7 @@ export default function Home() {
     return (
         <>
             <section className="Home flex flex-col ">
-                <header>
+                <header className='w-full flex items-center justify-center'>
                     <label htmlFor="search"><svg xmlns="http://www.w3.org/2000/svg"
                         width="20" height="20"
                         viewBox="0 0 24 24"
