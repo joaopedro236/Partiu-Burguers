@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import getOrderRequisition from './Requisitions/getOrder'
 import Orders from './Components/Orders/Orders'
 function App() {
-  const [orders, setOrders] = useState({})
+  const [orders, setOrders] = useState([])
   useEffect(()=> {
     getOrderRequisition(setOrders)
   },[])

@@ -1,5 +1,5 @@
 import './Orders.css'
-export default function Orders(orders) {
+export default function Orders({ orders }) {
     return (
         <>
             <section className="orders flex flex-col gap-5">
