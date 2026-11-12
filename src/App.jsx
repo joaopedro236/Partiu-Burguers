@@ -15,7 +15,7 @@ function App() {
   },[])
   return (
     <>
-    <Cart orderCart={orderCart}/>
+    <Cart orderCart={orderCart} setOrderCart={setOrderCart} cartRequest={cartRequest}/>
     <Orders orders={orders} cartRequest={cartRequest} setOrderCart={setOrderCart}/>
 
     </>

@@ -1,7 +1,12 @@
 import './cart.css'
 import { useState } from 'react'
-export default function Cart({ orderCart ,}) {
+export default function Cart({ orderCart ,setOrderCart, cartRequest}) {
     const [cartActive, setCartActive] = useState(false)
+    const removeFromCart = (id) => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]')
+    localStorage.setItem('cart', JSON.stringify(cart.filter(item => item !== id)))
+    setOrderCart(orderCart.filter(order => order.id !== id))
+}
     return (
         <>
             <svg
@@ -33,6 +38,10 @@ export default function Cart({ orderCart ,}) {
                                 <h2>{order.name}</h2>
                                 <p>R$ {order.price}</p>
                             </div>
+                            <button onClick={() => {
+                                removeFromCart(order.id)
+                                cartRequest({setOrderCart})
+                                }}>X</button>
                         </div>
                     ))}
                 </div>
