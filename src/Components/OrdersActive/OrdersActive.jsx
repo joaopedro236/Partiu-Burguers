@@ -1,7 +1,7 @@
 import './ordersActive.css'
 export default function OrdersActive({ ordersActive, setOrdersActive }) {
     return (
-        <>
+        <>  
             <section className={`ordersActive min-h-screen  text-center flex-col w-full ${ordersActive != null ? 'flex' : 'hidden'}`}>
                 <header className='flex flex-col  text-center  relative'>
                     <button className='absolute top-4 left-4 flex items-center justify-center rounded-full ' onClick={()=> setOrdersActive(null)}>X</button>

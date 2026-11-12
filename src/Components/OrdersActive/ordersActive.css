@@ -1,6 +1,10 @@
 .ordersActive {
     padding: 0;
 }
+.ordersActive img {
+    max-width: 400px;
+    border-radius: 10px
+}
 .ordersActive header button {
     background-color: rgba(0, 0, 0, 0.171);
     color: white;
@@ -11,6 +15,7 @@
 .ordersActive div p {
     color: var(--text-gray);
     font-size: 13.5px;
+    max-width: 350px;
 }
 
 .ordersActive div {
