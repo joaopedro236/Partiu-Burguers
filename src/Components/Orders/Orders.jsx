@@ -8,7 +8,7 @@ export default function Orders({ orders}) {
     const types = [...new Set(orders.map(order => order.type))]
     return (
         <>
-            <section className={`orders ${ordersActive != null ? 'hidden!' : ''}`}>
+            <section className={`orders `}>
                 <h1 className='title'>Cardapio</h1>
                 {types.map(type => (
                     <div key={type} className="order-category">
