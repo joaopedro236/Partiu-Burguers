@@ -23,7 +23,7 @@ export default function Orders({ orders}) {
                             breakpoints={{
                                 320: { spaceBetween: 12 },
                                 768: { spaceBetween: 16 }
-                            }}
+                        }}
                         >
                             {orders
                                 .filter(order => order.type === type)
