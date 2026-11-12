@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders,ordersActive,  setOrdersActive }) {
+export default function Orders({ orders}) {
     const types = [...new Set(orders.map(order => order.type))]
     return (
         <>
@@ -32,7 +32,7 @@ export default function Orders({ orders,ordersActive,  setOrdersActive }) {
                                         key={order.id}
                                         style={{ width: '260px', height: 'auto' }}  
                                     >
-                                        <div className="order" onClick={()=> setOrdersActive(order)}>
+                                        <div className="order" >
                                             <img
                                                 src={order.image_url}
                                                 alt={order.name}
@@ -40,6 +40,7 @@ export default function Orders({ orders,ordersActive,  setOrdersActive }) {
                                             <h1>{order.name}</h1>
                                             <p>{order.description}</p>
                                             <p>R${order.price}</p>
+                                            <button className='w-full'>Adicionar no carrinho</button>
                                         </div>
                                     </SwiperSlide>
                                 ))}

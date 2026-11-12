@@ -53,14 +53,14 @@
 
 .order-category .swiper-slide {
     display: flex;
-    height: 360px;
+    height: 400px;
     align-items: stretch;
 }
 
 .order {
     width: 100%;
     min-width: 0;
-    height: 360px;
+    height: 400px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,11 @@
     border-radius: 14px;
     transition: all 0.3s ease;
 }
-
+.order  button{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #3b82f6;
+}
 .order img {
     width: 100%;
     height: 130px;
