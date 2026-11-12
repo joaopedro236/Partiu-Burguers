@@ -4,14 +4,14 @@ export default function OrdersActive({ ordersActive, setOrdersActive }) {
         <>
             <section className={`ordersActive min-h-screen  text-center flex-col w-full ${ordersActive != null ? 'flex' : 'hidden'}`}>
                 <header className='flex flex-col  text-center  relative'>
-                    <button className='absolute top-4 left-4 rounded-full ' onClick={()=> setOrdersActive(null)}>X</button>
+                    <button className='absolute top-4 left-4 flex items-center justify-center rounded-full ' onClick={()=> setOrdersActive(null)}>X</button>
                     <img src={ordersActive?.image_url} alt="photo burguer" className='w-full h-80' />
                 </header>
-                <div className='flex flex-col items-center justify-center mt-2'>
+                <div className='flex flex-col items-center justify-center '>
 
                     <h1>{ordersActive?.name}</h1>
                     <p>{ordersActive?.description}</p>
-                    <p>{ordersActive?.price}</p>
+                    <p className='money'>R${ordersActive?.price}</p>
                     <button className='w-full '>Adicionar no carrinho</button>
                 </div>
             </section>
