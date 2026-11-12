@@ -1,0 +1,21 @@
+.ordersActive {
+    padding: 20px;
+}
+.ordersActive button {
+    background-color: rgba(0, 0, 0, 0.171);
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+.ordersActive div p {
+    color: var(--text-gray);
+    font-size: 13.5px;
+}
+.ordersActive div {
+    gap: 15px;
+}
+.ordersActive button {
+    max-width: 300px;
+    border-radius: 20px;
+    background-color: #60a5fa;
+}
