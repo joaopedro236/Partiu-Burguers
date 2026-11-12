@@ -12,7 +12,7 @@ export default function Cart() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className='absolute top-5 right-5 z-[99]'
+                className='absolute top-5 right-5 z-[99] cursor-poiter'
             >
                 <circle cx="9" cy="21" r="1" />
                 <circle cx="20" cy="21" r="1" />

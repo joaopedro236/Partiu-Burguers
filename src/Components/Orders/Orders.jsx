@@ -4,8 +4,24 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders}) {
+export default function Orders({ orders }) {
     const types = [...new Set(orders.map(order => order.type))]
+    const addToCart = (order) => {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+        const existing = cart.find(item => item.id === order.id);
+
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            cart.push({
+                ...order,
+                quantity: 1
+            });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    };
     return (
         <>
             <section className={`orders `}>
@@ -23,14 +39,14 @@ export default function Orders({ orders}) {
                             breakpoints={{
                                 320: { spaceBetween: 12 },
                                 768: { spaceBetween: 16 }
-                        }}
+                            }}
                         >
                             {orders
                                 .filter(order => order.type === type)
                                 .map(order => (
                                     <SwiperSlide
                                         key={order.id}
-                                        style={{ width: '260px', height: 'auto' }}  
+                                        style={{ width: '260px', height: 'auto' }}
                                     >
                                         <div className="order" >
                                             <img
@@ -40,7 +56,7 @@ export default function Orders({ orders}) {
                                             <h1>{order.name}</h1>
                                             <p>{order.description}</p>
                                             <p>R${order.price}</p>
-                                            <button className='w-full'>Adicionar no carrinho</button>
+                                            <button className='w-full' onClick={() => addToCart(order)}>Adicionar no carrinho</button>
                                         </div>
                                     </SwiperSlide>
                                 ))}
