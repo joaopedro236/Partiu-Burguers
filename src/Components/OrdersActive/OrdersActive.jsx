@@ -12,7 +12,7 @@ export default function OrdersActive({ ordersActive, setOrdersActive }) {
                     <h1>{ordersActive?.name}</h1>
                     <p>{ordersActive?.description}</p>
                     <p className='money'>R${ordersActive?.price}</p>
-                    <button className='w-full '>Adicionar no carrinho</button>
+                    <button className='w-full buy '>Adicionar no carrinho</button>
                 </div>
             </section>
         </>

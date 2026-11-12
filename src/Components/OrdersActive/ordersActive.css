@@ -13,9 +13,9 @@
     margin-top: 20px;
     gap: 8px;
 }
-.ordersActive button {
+.ordersActive .buy{
     max-width: 300px;
-    border-radius: 20px;
+    border-radius: 10px;
     position: absolute;
     bottom: 0;
     left: 50%;
