@@ -1,7 +1,7 @@
 .ordersActive {
     padding: 20px;
 }
-.ordersActive button {
+.ordersActive header button {
     background-color: rgba(0, 0, 0, 0.171);
     color: white;
     width: 35px;
@@ -12,7 +12,7 @@
     font-size: 13.5px;
 }
 .ordersActive div {
-    gap: 15px;
+    gap: 8px;
 }
 .ordersActive button {
     max-width: 300px;
