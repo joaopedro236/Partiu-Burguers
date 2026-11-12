@@ -61,16 +61,16 @@ Aguardo confirmação!
                                 <h2>{order.name}</h2>
                                 <p>R$ {order.price}</p>
                             </div>
-                            <button  className='buyCart' onClick={() => {
+                            <button onClick={() => {
                                 removeFromCart(order.id)
-            
+
                                 cartRequest({ setOrderCart })
                             }}>X</button>
                         </div>
                     ))}
                 </div>
                 <h2>Total: R$ {total.toFixed(2)}</h2>
-                <button>Chamar no whatsapp</button>
+                <button className='buyCart'>Chamar no whatsapp</button>
             </section>
         </>
     )
