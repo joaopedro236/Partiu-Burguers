@@ -53,14 +53,14 @@
 
 .order-category .swiper-slide {
     display: flex;
-    height: 380px;
+    height: 440px;
     align-items: stretch;
 }
 
 .order {
     width: 100%;
     min-width: 0;
-    height: 380px;
+    height: 440px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
