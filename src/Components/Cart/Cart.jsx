@@ -24,7 +24,7 @@ ${products}
 
 Aguardo confirmação!`
 
-        const url = `https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
         window.open(url, '_blank')
     }
