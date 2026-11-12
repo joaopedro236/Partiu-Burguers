@@ -6,13 +6,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 export default function Orders({ orders, ordersActive, setOrdersActive }) {
     const orderTypes = ['Artesanais', 'Tradicionais', 'Combos', 'Porções', 'Bebidas'];
-    const types = [...new Set(orders.map(order => order.type).filter(Boolean))]
-        .sort((a, b) => {
-            const indexA = orderTypes.indexOf(a);
-            const indexB = orderTypes.indexOf(b);
-            return (indexA === -1 ? orderTypes.length : indexA)
-                - (indexB === -1 ? orderTypes.length : indexB);
-        });
+    const types = orderTypes.filter(type =>
+    orders.some(order => order.type?.trim().toLowerCase() === type.toLowerCase())
+)
     return (
         <>
             <section className={`orders ${ordersActive != null ? 'hidden!' : ''}`}>
