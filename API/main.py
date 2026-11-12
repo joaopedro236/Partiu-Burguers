@@ -5,6 +5,7 @@ from collections import defaultdict
 import os
 from dotenv import load_dotenv
 from API.Routers.getOrder import router as getOrder
+from API.Routers.getCard import router as getCard
 from API.Databases.Databases.Orders import createDatabaseOrders 
 app = FastAPI()
 
@@ -48,6 +49,7 @@ app.add_middleware(
     expose_headers=["Set-Cookie"],
 )
 app.include_router(getOrder)
+app.include_router(getCard)
 @app.on_event("startup")
 def startup():
     createDatabaseOrders()
