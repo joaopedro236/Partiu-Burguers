@@ -39,7 +39,7 @@ export default function Orders({ orders }) {
                                             />
                                             <h1>{order.name}</h1>
                                             <p>{order.description}</p>
-                                            <p>{order.price}</p>
+                                            <p>R${order.price}</p>
                                         </div>
                                     </SwiperSlide>
                                 ))}
