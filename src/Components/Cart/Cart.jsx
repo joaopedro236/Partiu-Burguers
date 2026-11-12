@@ -43,7 +43,7 @@ Aguardo confirmação!
                 strokeLinecap="round"
                 onClick={() => setCartActive(prev => !prev)}
                 strokeLinejoin="round"
-                className={`{${cartActive ? 'fixed' : 'absolute'} top-5 right-5 z-[99] iconCart`}
+                className={`${cartActive ? 'fixed' : 'absolute'} top-5 right-5 z-[99] iconCart`}
             >
                 <circle cx="9" cy="21" r="1" />
                 <circle cx="20" cy="21" r="1" />
