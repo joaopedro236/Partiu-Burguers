@@ -4,8 +4,12 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders,ordersActive,  setOrdersActive }) {
-    const types = [...new Set(orders.map(order => order.type))]
+export default function Orders({ orders, ordersActive, setOrdersActive }) {
+    const orderTypes = ['Artesanais', 'Tradicionais', 'Combos', 'Porções', 'Bebidas'];
+
+    const types = orderTypes.filter(type =>
+        orders.some(order => order.type === type)
+    );
     return (
         <>
             <section className={`orders ${ordersActive != null ? 'hidden!' : ''}`}>
@@ -30,9 +34,9 @@ export default function Orders({ orders,ordersActive,  setOrdersActive }) {
                                 .map(order => (
                                     <SwiperSlide
                                         key={order.id}
-                                        style={{ width: '260px', height: 'auto' }}  
+                                        style={{ width: '260px', height: 'auto' }}
                                     >
-                                        <div className="order" onClick={()=> setOrdersActive(order)}>
+                                        <div className="order" onClick={() => setOrdersActive(order)}>
                                             <img
                                                 src={order.image_url}
                                                 alt={order.name}
