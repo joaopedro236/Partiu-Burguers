@@ -4,11 +4,11 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders }) {
+export default function Orders({ orders,ordersActive,  setOrdersActive }) {
     const types = [...new Set(orders.map(order => order.type))]
     return (
         <>
-            <section className="orders">
+            <section className={`orders ${ordersActive != null ? 'hidden!' : ''}`}>
                 <h1 className='title'>Cardapio</h1>
                 {types.map(type => (
                     <div key={type} className="order-category">
@@ -32,7 +32,7 @@ export default function Orders({ orders }) {
                                         key={order.id}
                                         style={{ width: '260px', height: 'auto' }}  
                                     >
-                                        <div className="order">
+                                        <div className="order" onClick={()=> setOrdersActive(order)}>
                                             <img
                                                 src={order.image_url}
                                                 alt={order.name}
