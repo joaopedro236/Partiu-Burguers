@@ -13,7 +13,7 @@ export default async function cartRequest({setOrderCart}) {
         if(data?.Error){
             console.error(error)
         }
-        setOrderCart(data.orders)
+        setOrderCart(data.orders || [])
     }catch(error){
         console.error(error)
     }

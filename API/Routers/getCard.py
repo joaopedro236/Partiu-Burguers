@@ -15,7 +15,7 @@ def get_cart(data: CartRequest):
             return {'Status': True, 'orders': []}
         placeholders = ', '.join(['%s'] * len(ids))
         cursor.execute(
-            f"SELECT  name, price, image_url FROM Orders WHERE id IN ({placeholders})",
+            f"SELECT  id,name, price, image_url FROM Orders WHERE id IN ({placeholders})",
             tuple(ids)
         )
         result = cursor.fetchall()
@@ -23,9 +23,10 @@ def get_cart(data: CartRequest):
             'Status': True,
             'orders': [
                 {
-                    'name': row[0],
-                    'price': row[1],
-                    'image_url': row[2]
+                    'id': row[0],
+                    'name': row[1],
+                    'price': row[2],
+                    'image_url': row[3]
                 }
                 for row in result
             ]
