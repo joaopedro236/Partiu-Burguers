@@ -61,8 +61,9 @@ Aguardo confirmação!
                                 <h2>{order.name}</h2>
                                 <p>R$ {order.price}</p>
                             </div>
-                            <button onClick={() => {
+                            <button  className='buyCart' onClick={() => {
                                 removeFromCart(order.id)
+            
                                 cartRequest({ setOrderCart })
                             }}>X</button>
                         </div>

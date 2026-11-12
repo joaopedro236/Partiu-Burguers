@@ -41,7 +41,7 @@
     padding-top: 16px;
 }
 
-.cart button {
+.buyCart     {
     width: 100%;
     margin-top: 16px;
     padding: 12px;
@@ -53,11 +53,11 @@
     transition: .2s;
 }
 
-.cart button:hover {
+.buyCart :hover {
     background: #7dd3fc;
 }
 
-.cart button:active {
+.buyCart :active {
     transform: scale(.97);
 }
 .cart-item {
