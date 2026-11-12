@@ -9,26 +9,24 @@ export default function Cart({ orderCart, setOrderCart, cartRequest }) {
     }
     const total = orderCart.reduce((acc, order) => acc + Number(order.price), 0)
     const sendWhatsApp = () => {
-        const phone = '+55 11 97639-1353'
+        const phone = '5511976391353'
 
         const products = orderCart.map(order =>
             `• ${order.name} - R$ ${Number(order.price).toFixed(2)}`
         ).join('\n')
 
-        const message = `
-Olá! Gostaria de fazer um pedido.
+        const message = `Olá! Gostaria de fazer um pedido.
 
 *Meu pedido:*
 ${products}
 
 *Total: R$ ${total.toFixed(2)}*
 
-Aguardo confirmação!
-    `
+Aguardo confirmação!`
 
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
 
-        window.open(url, '_blank')
+        window.open(url, '_blank', 'noopener,noreferrer')
     }
     return (
         <>
