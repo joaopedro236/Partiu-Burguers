@@ -29,7 +29,7 @@ export default function Orders({ orders, ordersActive, setOrdersActive }) {
                             }}
                         >
                             {orders
-                                .filter(order => order.type === type)
+                                .filter(order => order.type?.trim().toLowerCase() === type.toLowerCase())
                                 .map(order => (
                                     <SwiperSlide
                                         key={order.id}
