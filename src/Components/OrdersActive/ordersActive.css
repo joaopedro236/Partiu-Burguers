@@ -25,4 +25,6 @@
 }
 .ordersActive .money {
     font-size: 15.5px;
+    color: white;
+    margin-top: 5px;
 }
