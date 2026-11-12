@@ -220,13 +220,6 @@
         font-size: 22px;
     }
 
-    .order-category .swiper-slide {
-        height: 340px;
-    }
-
-    .order {
-        height: 340px;
-    }
 
     .order-category .swiper-button-next,
     .order-category .swiper-button-prev {
