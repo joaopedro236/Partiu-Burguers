@@ -4,16 +4,16 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders }) {
+export default function Orders({ orders, setOrderCart, cartRequest }) {
     const types = [...new Set(orders.map(order => order.type))]
     const addToCart = (id) => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-    if (!cart.includes(id)) {
-        cart.push(id);
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-};
+        if (!cart.includes(id)) {
+            cart.push(id);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    };
     return (
         <>
             <section className={`orders `}>
@@ -49,7 +49,10 @@ export default function Orders({ orders }) {
                                             <p>{order.description}</p>
                                             <p>R${order.price}</p>
                                             <button className='w-full'
-                                                onClick={() => addToCart(order.id)}>Adicionar no carrinho</button>
+                                                onClick={() => {
+                                                    addToCart(order.id)
+                                                    cartRequest(setOrderCart)
+                                                }}>Adicionar no carrinho</button>
                                         </div>
                                     </SwiperSlide>
                                 ))}

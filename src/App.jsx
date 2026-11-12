@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <Cart orderCart={orderCart}/>
-    <Orders orders={orders} />
+    <Orders orders={orders} cartRequest={cartRequest} setOrderCart={setOrderCart}/>
 
     </>
   )

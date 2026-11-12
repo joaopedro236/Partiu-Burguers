@@ -1,6 +1,6 @@
 import './cart.css'
 import { useState } from 'react'
-export default function Cart({ orderCart }) {
+export default function Cart({ orderCart ,}) {
     const [cartActive, setCartActive] = useState(false)
     return (
         <>
@@ -15,7 +15,7 @@ export default function Cart({ orderCart }) {
                 strokeLinecap="round"
                 onClick={()=> setCartActive(prev => !prev)}
                 strokeLinejoin="round"
-                className='absolute top-5 right-5 z-[99] cursor-poiter'
+                className='absolute top-5 right-5 z-[99] iconCart'
             >
                 <circle cx="9" cy="21" r="1" />
                 <circle cx="20" cy="21" r="1" />
