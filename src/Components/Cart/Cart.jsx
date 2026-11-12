@@ -70,7 +70,7 @@ Aguardo confirmação!
                     ))}
                 </div>
                 <h2>Total: R$ {total.toFixed(2)}</h2>
-                <button className='buyCart'>Chamar no whatsapp</button>
+                <button onClick={sendWhatsApp} className={`buyCart ${orderCart == [] ? 'hidden!' : ''}`}>Chamar no whatsapp</button>
             </section>
         </>
     )
