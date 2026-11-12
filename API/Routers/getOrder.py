@@ -20,7 +20,14 @@ def get_trips():
     try:
         conn, cursor = connect_database_Order()
         cursor.execute('''
-        select id, name, description, image_url, price, type from Orders where active = true''')
+        select id, name, description, image_url, price, type from Orders where active = true  ORDER BY CASE LOWER(TRIM(type))
+        WHEN 'artesanais' THEN 1
+        WHEN 'tradicionais' THEN 2
+        WHEN 'combos' THEN 3
+        WHEN 'porções' THEN 4
+        WHEN 'bebidas' THEN 5
+        ELSE 6
+    END''')
         result = cursor.fetchall()
         response = {
     'Status': True,

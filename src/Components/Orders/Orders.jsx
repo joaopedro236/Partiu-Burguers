@@ -4,18 +4,8 @@ import { Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-export default function Orders({ orders, ordersActive, setOrdersActive }) {
-    const orderTypes = ['Artesanais', 'Tradicionais', 'Combos', 'Porções', 'Bebidas'];
-
-    const types = [...new Set(orders.map(order => order.type).filter(Boolean))];
-
-    types.sort((a, b) => {
-        const normalize = value => value.trim().toLowerCase();
-        const indexA = orderTypes.findIndex(t => normalize(t) === normalize(a));
-        const indexB = orderTypes.findIndex(t => normalize(t) === normalize(b));
-
-        return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
-    });
+export default function Orders({ orders,ordersActive,  setOrdersActive }) {
+    const types = [...new Set(orders.map(order => order.type))]
     return (
         <>
             <section className={`orders ${ordersActive != null ? 'hidden!' : ''}`}>
@@ -36,13 +26,13 @@ export default function Orders({ orders, ordersActive, setOrdersActive }) {
                             }}
                         >
                             {orders
-                                .filter(order => order.type?.trim().toLowerCase() === type.toLowerCase())
+                                .filter(order => order.type === type)
                                 .map(order => (
                                     <SwiperSlide
                                         key={order.id}
-                                        style={{ width: '260px', height: 'auto' }}
+                                        style={{ width: '260px', height: 'auto' }}  
                                     >
-                                        <div className="order" onClick={() => setOrdersActive(order)}>
+                                        <div className="order" onClick={()=> setOrdersActive(order)}>
                                             <img
                                                 src={order.image_url}
                                                 alt={order.name}
