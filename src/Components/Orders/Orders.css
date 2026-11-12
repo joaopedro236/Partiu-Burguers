@@ -17,15 +17,15 @@
 .title {
     font-size: 33px;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 16px;
-}
-
 .swiper-button-next,
 .swiper-button-prev {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 12px;
 }
 .orders {
     width: 100%;
