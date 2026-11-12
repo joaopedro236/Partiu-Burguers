@@ -5,14 +5,17 @@ import { useState, useEffect } from 'react'
 import getOrderRequisition from './Requisitions/getOrder'
 import Orders from './Components/Orders/Orders'
 import Cart from './Components/Cart/Cart'
+import cartRequest from './Requisitions/cartRequest'
 function App() {
   const [orders, setOrders] = useState([])
+  const [orderCart, setOrderCart]= useState([])
   useEffect(()=> {
     getOrderRequisition(setOrders)
+    cartRequest(setOrderCart)
   },[])
   return (
     <>
-    <Cart/>
+    <Cart orderCart={orderCart}/>
     <Orders orders={orders} />
 
     </>
