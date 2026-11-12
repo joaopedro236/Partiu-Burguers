@@ -11,7 +11,7 @@ function App() {
   const [orderCart, setOrderCart]= useState([])
   useEffect(()=> {
     getOrderRequisition(setOrders)
-    cartRequest(setOrderCart)
+    cartRequest({setOrderCart})
   },[])
   return (
     <>

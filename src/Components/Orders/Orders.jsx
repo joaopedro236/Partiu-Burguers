@@ -51,7 +51,7 @@ export default function Orders({ orders, setOrderCart, cartRequest }) {
                                             <button className='w-full'
                                                 onClick={() => {
                                                     addToCart(order.id)
-                                                    cartRequest(setOrderCart)
+                                                    cartRequest({setOrderCart})
                                                 }}>Adicionar no carrinho</button>
                                         </div>
                                     </SwiperSlide>
