@@ -9,7 +9,7 @@ def createDatabaseOrders():
         cursor.execute("""
         create table if not exists Orders (
         id serial primary key,
-        name text, 
+        name text,
         description text,
         image_url text,
         price numeric(10,2),
