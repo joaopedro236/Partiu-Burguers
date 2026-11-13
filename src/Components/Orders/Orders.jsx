@@ -2,7 +2,17 @@ import './Orders.css'
 
 import { useState } from 'react'
 export default function Orders({ orders, setOrderCart, cartRequest }) {
+    const orderTypes = [
+        'Tradicional',
+        'Artesanal',
+        'Combo Tradicional',
+        'Combo Artesanal',
+        'Porção',
+        'Bebidas'
+    ]
+
     const types = [...new Set(orders.map(order => order.type))]
+        .sort((a, b) => orderTypes.indexOf(a) - orderTypes.indexOf(b))
     const [cartIds, setCartIds] = useState(() => {
         return JSON.parse(localStorage.getItem('cart') || '[]')
     })
@@ -16,6 +26,7 @@ export default function Orders({ orders, setOrderCart, cartRequest }) {
 
         cartRequest({ setOrderCart })
     }
+
     return (
         <>
             <section className={`orders `}>
