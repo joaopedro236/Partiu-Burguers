@@ -7,7 +7,7 @@
     max-width: 384px;
     height: 100vh;
     padding: 24px;
-    background: #0f172a;
+    background: #2a1b0f;
     color: white;
     z-index: 50;
     display: flex;
@@ -44,7 +44,7 @@
     align-items: center;
     gap: 14px;
     padding: 12px;
-    background: #1e293b;
+    background: #3b2d1e;
     position: relative;
     border-radius: 12px;
     font-weight: 700;
