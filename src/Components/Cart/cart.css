@@ -7,25 +7,25 @@
     max-width: 384px;
     height: 100vh;
     padding: 24px;
-    background: #160d09;
-    color: #fff7ed;
+    background: #120C09;
+    color: #F5EDE5;
     z-index: 50;
     display: flex;
     flex-direction: column;
     gap: 24px;
     overflow-y: auto;
-    border-left: 1px solid #382219;
+    border-left: 1px solid #3B2920;
 }
 
 .iconCart {
     cursor: pointer;
-    color: #f59e0b;
+    color: #D97736;
 }
 
 .cart h1 {
     font-size: 24px;
     font-weight: 700;
-    color: #fff7ed;
+    color: #F5EDE5;
 }
 
 .cart-items {
@@ -35,12 +35,12 @@
 }
 
 .cart > h2 {
-    color: #f59e0b;
+    color: #E69A62;
     font-size: 20px;
     font-weight: 700;
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid #382219;
+    border-top: 1px solid #3B2920;
 }
 
 .cart-item {
@@ -48,8 +48,8 @@
     align-items: center;
     gap: 14px;
     padding: 12px;
-    background: #241610;
-    border: 1px solid #42291d;
+    background: #1C1410;
+    border: 1px solid #38271E;
     position: relative;
     border-radius: 12px;
     font-weight: 700;
@@ -69,11 +69,11 @@
     margin: 0;
     padding: 0;
     border: none;
-    color: #fff7ed;
+    color: #F5EDE5;
 }
 
 .cart-info p {
-    color: #fb923c;
+    color: #DDA078;
     font-weight: 700;
 }
 
@@ -82,7 +82,7 @@
     cursor: pointer;
     background: transparent;
     border: none;
-    color: #fca5a5;
+    color: #B98D7A;
     font-size: 18px;
     width: auto;
     padding: 5px;
@@ -90,15 +90,15 @@
 }
 
 .cart-item button:hover {
-    color: #ef4444;
+    color: #EF6B5B;
 }
 
 .buyCart {
     width: 100%;
     margin-top: 16px;
     padding: 12px;
-    background: linear-gradient(135deg, #ea580c, #f59e0b);
-    color: #1c0d05;
+    background: linear-gradient(135deg, #C76A32, #E69A50);
+    color: #1C1009;
     font-weight: 800;
     border-radius: 10px;
     cursor: pointer;
@@ -107,7 +107,7 @@
 }
 
 .buyCart:hover {
-    background: linear-gradient(135deg, #f97316, #fbbf24);
+    background: linear-gradient(135deg, #D97736, #F0AD68);
 }
 
 .buyCart:active {
