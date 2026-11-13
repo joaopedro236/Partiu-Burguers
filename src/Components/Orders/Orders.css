@@ -9,28 +9,35 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 40px;
     margin-top: 20px;
 }
 
 .title {
     font-size: 33px;
-    color: #f1f5f9;
+    color: #f8fafc;
 }
 
 .order-category {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 18px;
     min-width: 0;
 }
 
 .order-category > h1 {
     font-size: 22px;
     font-weight: 700;
-    color: #f1f5f9;
+    color: #f5e7dc;
     margin-bottom: 4px;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
 }
 
 .order {
@@ -40,10 +47,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
-    padding: 12px;
-    background: #111c30;
-    border: 1px solid #243753;
+    gap: 18px;
+    padding: 14px;
+    background: #17100e;
+    border: 1px solid #38221b;
     border-radius: 14px;
     transition: 0.2s ease;
 }
@@ -59,52 +66,54 @@
 .order h1 {
     font-size: 16px;
     font-weight: 700;
-    color: #f1f5f9;
+    color: #fff7ed;
 }
 
 .order p {
     font-size: 12px;
-    line-height: 1.5;
-    color: #94a3b8;
+    line-height: 1.6;
+    color: #c4aaa0;
 }
 
 .order p:nth-of-type(2) {
-    font-size: 16px;
-    font-weight: 700;
-    color: #60a5fa;
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffad42;
 }
 
 .order button {
     width: auto;
-    min-width: 130px;
-    padding: 10px 14px;
+    min-width: 145px;
+    padding: 11px 15px;
     margin-left: auto;
     flex-shrink: 0;
     border-radius: 9px;
-    border: 1px solid #3b82f6;
-    background: #1d4ed822;
-    color: #93c5fd;
+    border: 1px solid #e65b24;
+    background: linear-gradient(135deg, #c83d17, #ed701e);
+    color: #fff7ed;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .order button:hover {
-    background: #2563eb;
-    color: #ffffff;
+    background: linear-gradient(135deg, #ed701e, #ff9b32);
+    border-color: #ffad42;
+    transform: translateY(-1px);
 }
 
 .order button:disabled {
-    background: #14532d33;
-    border-color: #166534;
-    color: #4ade80;
+    background: #183c26;
+    border-color: #28623a;
+    color: #86efac;
     cursor: default;
+    transform: none;
 }
 
 .order:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 5px 18px #00000030;
+    border-color: #a94420;
+    box-shadow: 0 5px 20px #e65b2415;
 }
 
 @media (max-width: 650px) {
@@ -117,15 +126,23 @@
     }
 
     .orders {
-        gap: 28px;
+        gap: 32px;
+    }
+
+    .order-category {
+        gap: 14px;
     }
 
     .order-category > h1 {
         font-size: 20px;
     }
 
+    .order-list {
+        gap: 12px;
+    }
+
     .order {
-        gap: 11px;
+        gap: 12px;
         padding: 10px;
         min-height: 120px;
     }
@@ -145,12 +162,12 @@
     }
 
     .order p:nth-of-type(2) {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .order button {
         min-width: auto;
-        padding: 8px;
+        padding: 9px;
         font-size: 10px;
     }
 }
