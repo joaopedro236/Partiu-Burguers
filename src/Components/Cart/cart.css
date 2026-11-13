@@ -7,25 +7,25 @@
     max-width: 384px;
     height: 100vh;
     padding: 24px;
-    background: #120C09;
-    color: #F5EDE5;
+    background: #18120F;
+    color: #F5F0EB;
     z-index: 50;
     display: flex;
     flex-direction: column;
     gap: 24px;
     overflow-y: auto;
-    border-left: 1px solid #3B2920;
+    border-left: 1px solid #332720;
 }
 
 .iconCart {
     cursor: pointer;
-    color: #D97736;
+    color: #D6A078;
 }
 
 .cart h1 {
     font-size: 24px;
     font-weight: 700;
-    color: #F5EDE5;
+    color: #F5F0EB;
 }
 
 .cart-items {
@@ -35,12 +35,12 @@
 }
 
 .cart > h2 {
-    color: #E69A62;
+    color: #D6A078;
     font-size: 20px;
     font-weight: 700;
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid #3B2920;
+    border-top: 1px solid #332720;
 }
 
 .cart-item {
@@ -48,8 +48,8 @@
     align-items: center;
     gap: 14px;
     padding: 12px;
-    background: #1C1410;
-    border: 1px solid #38271E;
+    background: #211914;
+    border: 1px solid #382B23;
     position: relative;
     border-radius: 12px;
     font-weight: 700;
@@ -69,11 +69,11 @@
     margin: 0;
     padding: 0;
     border: none;
-    color: #F5EDE5;
+    color: #F5F0EB;
 }
 
 .cart-info p {
-    color: #DDA078;
+    color: #D6A078;
     font-weight: 700;
 }
 
@@ -82,7 +82,7 @@
     cursor: pointer;
     background: transparent;
     border: none;
-    color: #B98D7A;
+    color: #C4AAA0;
     font-size: 18px;
     width: auto;
     padding: 5px;
@@ -90,15 +90,15 @@
 }
 
 .cart-item button:hover {
-    color: #EF6B5B;
+    color: #E58B7D;
 }
 
 .buyCart {
     width: 100%;
     margin-top: 16px;
     padding: 12px;
-    background: linear-gradient(135deg, #C76A32, #E69A50);
-    color: #1C1009;
+    background: linear-gradient(135deg, #A85F39, #C98250);
+    color: #FFFFFF;
     font-weight: 800;
     border-radius: 10px;
     cursor: pointer;
@@ -107,7 +107,7 @@
 }
 
 .buyCart:hover {
-    background: linear-gradient(135deg, #D97736, #F0AD68);
+    background: linear-gradient(135deg, #B96D45, #D49360);
 }
 
 .buyCart:active {
