@@ -47,8 +47,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 18px;
-    padding: 14px;
+    gap: 20px;
+    padding: 16px;
     background: #17100e;
     border: 1px solid #38221b;
     border-radius: 14px;
@@ -63,30 +63,39 @@
     border-radius: 10px;
 }
 
-.order h1 {
+.order-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.order-info h1 {
     font-size: 16px;
     font-weight: 700;
     color: #fff7ed;
+    margin: 0;
 }
 
-.order p {
+.order-info p {
     font-size: 12px;
     line-height: 1.6;
     color: #c4aaa0;
+    margin: 0;
 }
 
-.order p:nth-of-type(2) {
+.order-info p:nth-of-type(2) {
     font-size: 17px;
     font-weight: 800;
     color: #ffad42;
 }
 
-.order button {
+.order-info button {
     width: auto;
     min-width: 145px;
     padding: 11px 15px;
-    margin-left: auto;
-    flex-shrink: 0;
     border-radius: 9px;
     border: 1px solid #e65b24;
     background: linear-gradient(135deg, #c83d17, #ed701e);
@@ -97,13 +106,13 @@
     transition: 0.2s ease;
 }
 
-.order button:hover {
+.order-info button:hover {
     background: linear-gradient(135deg, #ed701e, #ff9b32);
     border-color: #ffad42;
     transform: translateY(-1px);
 }
 
-.order button:disabled {
+.order-info button:disabled {
     background: #183c26;
     border-color: #28623a;
     color: #86efac;
@@ -153,19 +162,24 @@
         min-width: 100px;
     }
 
-    .order h1 {
+    .order-info {
+        gap: 7px;
+    }
+
+    .order-info h1 {
         font-size: 14px;
     }
 
-    .order p {
+    .order-info p {
         font-size: 11px;
     }
 
-    .order p:nth-of-type(2) {
+    .order-info p:nth-of-type(2) {
         font-size: 15px;
     }
 
-    .order button {
+    .order-info button {
+        width: 100%;
         min-width: auto;
         padding: 9px;
         font-size: 10px;
@@ -174,11 +188,17 @@
 
 @media (max-width: 380px) {
     .order {
-        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .order button {
+    .order img {
+        width: 85px;
+        height: 100px;
+        min-width: 85px;
+    }
+
+    .order-info button {
         width: 100%;
-        margin-left: 0;
     }
 }
