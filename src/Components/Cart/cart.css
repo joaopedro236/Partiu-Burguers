@@ -32,7 +32,7 @@
 }
 
 .cart > h2 {
-    color: #7dd3fc;
+    color: #fcb87d;
     font-size: 20px;
     font-weight: 700;
     margin-top: 16px;
@@ -67,7 +67,7 @@
 }
 
 .cart-info p {
-    color: #38bdf8;
+    color: #f89238;
     font-weight: 600;
 }
 
@@ -86,8 +86,8 @@
     width: 100%;
     margin-top: 16px;
     padding: 12px;
-    background: #38bdf8;
-    color: #082f49;
+    background: #f8ae38;
+    color: #490808;
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
@@ -95,7 +95,7 @@
 }
 
 .buyCart:hover {
-    background: #7dd3fc;
+    background: #fce57d;
 }
 
 .buyCart:active {
