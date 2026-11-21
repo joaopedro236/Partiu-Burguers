@@ -13,11 +13,9 @@ def get_cart(data: CartRequest):
 
         if not ids:
             return {'Status': True, 'orders': []}
-        placeholders = ', '.join(['%s'] * len(ids))
-        cursor.execute(
-            f"SELECT  id,name, price, image_url FROM Orders WHERE id IN ({placeholders})",
-            tuple(ids)
-        )
+        placeholders = ', '.join('%s' for _ in ids)
+        query = "SELECT id, name, price, image_url FROM Orders WHERE id IN (" + placeholders + ")"
+        cursor.execute(query, tuple(ids))
         result = cursor.fetchall()
         return {
             'Status': True,
