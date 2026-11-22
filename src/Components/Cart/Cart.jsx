@@ -27,6 +27,8 @@ Aguardo confirmação!`
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
         window.open(url, '_blank')
+        localStorage.setItem('cart', JSON.stringify([]))
+        setOrderCart([])
     }
     return (
         <>
